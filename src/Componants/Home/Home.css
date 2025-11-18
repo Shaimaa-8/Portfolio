@@ -1,0 +1,119 @@
+.home{
+    height: 100vh;
+    padding-top: 100px;
+    overflow: hidden;
+     /* 👈 خلي الأب الرئيسي relative */
+
+   
+}
+.home_container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+
+}
+.btns{
+    display: flex;
+    gap:1.2rem;
+    margin-top: 2.5rem;
+    justify-content: center;
+}
+
+.home_container h4{
+    font-size:1.5rem;
+
+}
+
+.home_container .me {
+  width: 330px;
+  height: 400px;
+  background: linear-gradient(var(--color-praimary), transparent);
+  border-radius: 12rem 12rem 0 0;
+  margin: 40px auto;
+  overflow: hidden;
+
+  display: flex;             /* الفلكس */
+  justify-content: center;    /* بالنص عرض */
+  align-items: center;        /* بالنص طول */
+  padding: 0;                 /* نشيل البادينغ لأنه كان يحرك الصورة */
+}
+
+.home_container .me img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;          /* عشان تعبي الإطار بدون تشويه */
+}
+.scroll_down{
+    position: absolute;
+    right: -35px;
+    bottom: 88px;
+    transform: rotate(90deg);
+    font-weight: 300;
+}
+.scroll_down:hover {
+  color: var(--color-light);   /* يتغير اللون عند الهوفر */
+  transform: rotate(90deg) translateX(5px);
+}
+
+/*mobile*/
+@media (max-width:600px) {
+    .home{
+        height: auto;
+        padding-top: 5rem;
+    }
+    
+}
+
+@media (max-width: 480px) {
+  .home {
+    height: auto;
+    padding-top: 5rem;
+  }
+
+ 
+  .homesocials::after {
+    content: '';
+    width: 0;
+  }
+
+  .scroll_down {
+    right: -47px;
+  }
+}
+.homesocials {
+ display: flex;
+     color: #ffffff;
+
+    flex-direction: column;
+    position: absolute;
+    left: 6%;
+    bottom: -41px;
+    transform: translateX(-50%);
+    gap: 0.8rem;
+    align-items: center;
+    z-index: 10;
+
+}
+
+.homesocials::after {
+  content: '';
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+.homesocials a {
+  font-size: 25px;
+  color: var(--color-primary);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .homesocials {
+        flex-direction: column;
+        left: -1%;
+        bottom: -2%;
+        gap: 1rem;
+  }
+}
+

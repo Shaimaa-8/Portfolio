@@ -1,0 +1,73 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #656f70;
+}
+
+/* Burger icon */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background: rgb(0, 0, 0);
+  margin: 5px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px; /* تحت الناف */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background:#ededed;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    max-height: 443px; /* ارتفاع كافي يفتح اللينكات */
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
