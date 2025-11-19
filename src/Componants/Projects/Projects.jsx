@@ -69,7 +69,6 @@ function Projects() {
             </div>
             <div className="project_content">
               <h3>{title}</h3>
-              <p className="project_tools">{tools}</p>
               <p className="project_description">{description}</p>
               {demo && (
                 <a href={demo} target="_blank" rel="noreferrer" className="btn btn-demo">
